@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+
+	<!-- MEDIUM+ SCREENS -->
+	<div class="main d-none d-md-flex flex-column">
+		
+		{% if request.user.is_authenticated %}
+
+		{% include 'publicacion/principal.html'  %}
+
+		{% for posti in postis  %}
+		<a href="">{{posti.user.username}}</a>
+		{% endfor %}
+
+		{% else %}
+			<p>Bienvenido pero no estas auntenticado</p>
+
+
+			<img src="{% static 'img/online.png' %}" alt="login" class="login-card-img">
+		{% endif %}	
+		<!-- 
+		include 'public_chat/snippets/public_chat_room.html' with room_id=room_id-->
+		 <!--  -->
+
+	</div>
+	<!-- END MEDIUM+ SCREENS -->
+	
+	<!-- SMALL SCREENS -->
+	<div class="d-flex d-md-none p-2">
+		<p>Este sitio no está diseñado para ser visto en un dispositivo móvil. Descargue la . <a href="#">aplicación</a>.</p>
+	</div>
+	<!-- END SMALL SCREENS -->
+</div>
+
+
+{% endblock content %}
+
+
+
+
+
