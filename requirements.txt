@@ -23,7 +23,7 @@ importlib-metadata==1.7.0
 incremental==17.5.0
 msgpack==1.0.0
 numpy==1.19.1
-opencv-python==4.4.0.40
+opencv-python-headless=4.5.4.60
 optional-django==0.1.0
 packaging==20.4
 Pillow==7.2.0
@@ -46,6 +46,3 @@ urllib3==1.25.10
 webencodings==0.5.1
 zipp==3.1.0
 zope.interface==5.1.0
-ffmpeg
-libsm6
-libxext6 
